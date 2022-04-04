@@ -1,0 +1,125 @@
+body {
+    background-color: #f3f3f3;
+}
+
+.animated-ring {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.container {
+    max-width: 720px;
+    width: 364px;
+}
+
+p {
+    font-size: 13px;
+    margin: 0;
+}
+
+@media (min-width: 576px) {
+    .container {
+        width: 550px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 550px;
+    }
+}
+
+.selection {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.row {
+    text-align: center;
+}
+
+.month {
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+}
+
+h5 {
+    font-size: 14px;
+  	text-transform: capitalize;
+}
+
+.month {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    margin: 2px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    transform: scale(1);
+    transition: all 0.2s ease-out;
+}
+
+.month:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.month.selected {
+    transform: scale(1.02);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid orange;
+    background-color: rgba(255, 166, 0, 0.5);
+}
+
+#tooltip {
+	background: rgb(238, 238, 238);
+	box-shadow: 0 0 5px #999999;
+	color: #333;
+	font-size: 12px;
+	padding: 5px 10px;
+	position: absolute;
+	text-align: center;
+	width: 130px;
+	z-index: 10;
+	display: block;
+    opacity: 0;
+}
+
+#info {
+    width: 300px;
+    margin: 10px auto;
+    background-color: hsla(91, 49%, 66%, 0.718);
+    padding: 10px;
+    border: 2px solid #7FC242;
+    border-radius: 7px;
+    text-align: left;
+    font-size: 14px;
+}
+
+#info span {
+    color: #dd0000;
+    font-weight: bold;
+}
+
+#info #totalSaving, 
+#info #avgSaving {
+    color: #1616ff;
+}
+
+#monthName {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#spendingAmount {
+    color: #dd0000;
+    font-weight: bold;
+}
+
+#savingAmount {
+    color: #1616ff;
+    font-weight: bold;
+}

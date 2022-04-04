@@ -1,0 +1,44 @@
+
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <title>Budgeting</title>
+          
+          
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /><link rel="stylesheet" href="styleBudgeting.css" />
+          
+          
+          
+        </head>
+        <body >
+          
+    <!-- HTML -->
+    <div class="container text-center">
+        <h3>My budget</h3>
+        <p>Click on the charts below to see your budget summary</p>
+        <div id="info">
+            Total spending: $<span id="totalSpending">0</span><br>
+            Total saving: $<span id="totalSaving">0</span><br>
+            Average spending $<span id="avgSpending">0</span> per month<br>
+            Average saving $<span id="avgSaving">0</span> per month
+        </div>
+        
+        <!-- monthly charts -->
+        <div class="row"></div>
+
+        <div id="tooltip">
+            <span id="monthName"></span> budget<br />
+            Spending $<span id="spendingAmount">0</span><br />
+            Saving $<span id="savingAmount">0</span>
+        </div>
+    </div> <!-- end .container -->
+
+    
+    
+
+          
+          <script src="https://d3js.org/d3.v3.min.js"></script><script src="scriptBudgeting.js"></script>
+          
+        </body>
+      </html>
+    
