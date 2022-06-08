@@ -1,49 +1,48 @@
-const progress = document.getElementById('progress')
-const prev = document.getElementById('prev')
-const next = document.getElementById('next')
-const circles = document.querySelectorAll('.circle')
+//variable to store reference to the <ul> element
+const todoList = document.getElementById("list");
 
-let currentActive = 1
+//function to add a new task
+function addTask() {
 
-next.addEventListener('click', () => {
-    currentActive++
+    //variable to store what the user typed in the text field
+    let submittedTask = document.getElementById("inputField").value;
 
-    if(currentActive > circles.length) {
-        currentActive = circles.length
+    //if user enters text into the input field
+    if (submittedTask.length > 0) {
+        
+        //create a new <li> element and store it to a variable
+        const listItem = document.createElement("li");
+
+        //add the submitted text to the list item
+        listItem.textContent = submittedTask;      
+
+        //append the <li> to the <ul>
+        todoList.appendChild(listItem)
+
+        //clear input field after submitting a task
+        document.getElementById("inputField").value = "";
+        
+        //call the removeItem() function when a task is clicked to remove it
+        listItem.onclick = removeItem; 
+    } 
+
+    //show message if user tries to submit a task with an empty input field
+    else {
+        alert("Please enter a task.");
     }
+} //closing bracket for addTask() function
 
-    update()
-})
-
-prev.addEventListener('click', () => {
-    currentActive--
-
-    if(currentActive < 1) {
-        currentActive = 1
+//event handler that calls the addTask() function if the "Enter" key is pressed
+document.addEventListener("keyup", function(event) {
+    
+    //call addTask() only when the Enter key is pressed   
+    if (event.key == "Enter") {
+        addTask();
     }
+}); //closing bracket for document.addEventListener
 
-    update()
-})
-
-function update() {
-    circles.forEach((circle, idx) => {
-        if(idx < currentActive) {
-            circle.classList.add('active')
-        } else {
-            circle.classList.remove('active')
-        }
-    })
-
-    const actives = document.querySelectorAll('.active')
-
-    progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
-
-    if(currentActive === 1) {
-        prev.disabled = true
-    } else if(currentActive === circles.length) {
-        next.disabled = true
-    } else {
-        prev.disabled = false
-        next.disabled = false
-    }
+//function to remove items when clicked
+function removeItem(event) {
+    const completedTask = event.target;
+    todoList.removeChild(completedTask);
 }
