@@ -1,0 +1,125 @@
+/* Medium font family for list items */
+@font-face {
+    font-family: "Raleway Medium";
+    src: url("/resources/fonts/Raleway-Medium.ttf");
+}
+
+/* Bold font family for headings */
+@font-face {
+    font-family: "Raleway Bold";
+    src: url("/resources/fonts/Raleway-Bold.ttf");
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    background-color: #A770EF;
+    background: -webkit-linear-gradient(to bottom, #A770EF, #CF8BF3, #FDB99B);
+    background: linear-gradient(to bottom, #A770EF, #CF8BF3, #FDB99B);   
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: "Raleway Bold", sans-serif;
+    font-size: 60px;
+    color: #ffffff;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for container that wraps around all the to-do list elements */
+div.wrapper {
+    background-color: #ffffff;
+    width: 70%;
+    margin: auto;
+    padding: 2em 3em;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for container that wraps arounnd the text field and button only */
+div.input-wrapper {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+
+/* Styling for the text field */
+input[type=text] {
+    font-size: 20px;
+    border: none;
+    background-color: #eeeeee;
+    flex: 2 1 0;
+    padding-left: 10px;
+    color: #27292C;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+button {
+    height: 100%;
+    border: none;
+    background-color: #3ABEAA;
+    color: #ffffff;
+    font-size: 20px;
+    flex: 1 1 0;
+}
+
+button:hover {
+    background-color: #6bc9bb;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    text-align: left;
+    font-size: 20px;
+    list-style-position: inside;
+    word-wrap: break-word;
+    border: none;
+    background-color: #ffffff;
+    margin: 20px 0;
+    color: #51545F;
+    font-family: "Raleway Medium", sans-serif;
+}
+
+li:hover {
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
+
+/* Media queries for mobile view */
+@media (max-width: 414px) {
+    h1 {
+        font-size: 3em;
+    }
+    div.input-wrapper {
+        flex-direction: column;
+        margin-top: 1em;
+    }
+    input {
+        padding: 10px;
+    }
+    input::placeholder {
+        text-align: center;
+    }
+    button {
+        padding: 10px;
+        margin-bottom: 1em;
+    }
+}
