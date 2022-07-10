@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "Orbitron";
+    src: url("/resources/fonts/Orbitron-Bold.ttf");
+}
+
+/* styling for the entire page */
+body {
+    background-color: #36D1DC;
+    background: linear-gradient(to bottom, #5B86E5, #36D1DC);
+    height: 100%;
+    font-family: "Orbitron", sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* parent <div> element that wraps around <div class="inner-container"> */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100vh;
+}
+
+/* child <div> element that holds the text, image, and button */
+.inner-container {
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 7% 3%;
+  	word-wrap: break-word;
+}
+
+img {
+    width: 200px;
+}
+
+button {
+    font-family: "Orbitron", sans-serif;
+    color: #ffffff;
+    font-size: 32px;
+    padding: 4% 9%;
+    border-radius: 38px;
+    background-color: #4586FF;
+    text-transform: uppercase;
+    margin: 9% auto 6%;
+    display: block;
+    border: none;
+    box-shadow: 0px 6px 0px #1a6aff;
+    transition: all 0.04s linear;
+    position: relative;
+    top: 0;
+}
+
+/* styling for the button when hovered */
+button:hover {
+    cursor: pointer;
+    background-color: #739eef;
+    box-shadow: 0px 6px 0px #5389ef;
+}
+
+/* styling for the button when clicked */
+button:active {
+    top: 6px;
+    box-shadow: none;
+}
+
+/* styling for the button after it is clicked */
+button:focus {
+    outline: none;
+}
+
+/* Media queries for mobile view */
+@media (max-width: 480px) {
+    .inner-container {
+        height: 85vh;
+        width: 85%;
+        padding-bottom: 0;
+    }
+    h2 {
+      font-size: 1.2em;
+    }
+    button {
+        width: 4.5em;
+        height: 4.5em;
+        border-radius: 50%;
+        font-size: 2.5em;
+        margin-top: 16%;
+        padding: 5%;
+    }
+}
