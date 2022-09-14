@@ -19,8 +19,10 @@
     <!-- <script src="DomManipulate2.js"></script> -->
     <!-- <script src="DomManipulate3.js"></script> -->
     <!-- <script src="selectbox.js"></script> -->
-    <script src="getElementByTagName.js"></script>
+    <!-- <script src="getElementByTagName.js"></script> -->
     <!-- <script src="function.js"></script> -->
+    <!-- <script src="changeImage.js"></script -->>
+    <script src="formValidation1.js"></script>
 </head>
 <body>
     <!-- Below is for DomManipulate1 example code: -->
@@ -54,5 +56,17 @@
     <p>This is Hussin Komik Kegemaran</p>
     <br>
     <button onclick="changeStyling()">Click Here!</button>
+
+    <!-- Below is for changeImage example code: -->
+    <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="runningbit.png" width="300">
+
+    <!-- Below is for form validation example code: -->
+    <form onsubmit = "return validate()" action = "message.html">
+        <input id="uname" placeholder="Username" type="text"/><br><br>
+        <input id="pass" placeholder="Password" type="password" />
+
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
